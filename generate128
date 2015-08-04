@@ -1,0 +1,21 @@
+<style>*{font-family:"courier";margin:0;padding:0;}</style>
+<?php
+function generate128Salt(){
+	$chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*+=?<>';
+	$salt = '';
+	for ($i = 0; $i < 128; $i++) {
+		$salt .= $chars[rand(0, strlen($chars) - 1)];
+	}
+	return $salt;
+}
+
+print "<h2>Generate Random 128 Characters</h2>";
+print htmlspecialchars(generate128Salt());
+
+
+
+
+
+
+
+
